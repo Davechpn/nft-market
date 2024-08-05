@@ -50,7 +50,7 @@ const AppBar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
             {walletConnected ? "Wallet Connected" : "Connect Wallet"}
           </button>
 
-          <div
+        { walletConnected && <div
             className="flex rounded-full p-1 text-sm items-center"
             style={{ border: "1px solid grey" }}
           >
@@ -71,7 +71,7 @@ const AppBar: React.FC<{ toggleSidebar: () => void }> = ({ toggleSidebar }) => {
               />
               xfs...fas
             </div>
-          </div>
+          </div>}
 
           <div
             className="hidden sm:block relative cursor-pointer"
